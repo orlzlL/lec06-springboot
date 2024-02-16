@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-    <h1 align="center">뷰 리졸버를 이용한 뷰 연결하기(feat. 포워딩vs리다이렉트)</h1>
+    <h1 algin="center">뷰 리졸버를 이용한 뷰 연결하기(feat.포워딩vs리다이렉트)</h1>
 
     <h3>문자열로 뷰 이름 반환하기</h3>
     <button onclick="location.href='string'">문자열로 뷰 이름 반환</button>
@@ -33,9 +33,9 @@
     <h3>ModelAndView로 redirect하기</h3>
     <button onclick="location.href='modelandview-redirect'">ModelAndView로 뷰 이름 반환하여 리다이렉트</button>
     <script>
-        const message2 = `[[${message2}]]`;
-        if(message2){                   // 설명. message2가 존재하면
-            // alert(message2);            // 설명. 확인 버튼이 있는 알림창이 뜬다. (현재는 F5번을 누르면 계속 뜬다.)
+        const message2 = `[[${param.message2}]]`;
+        if(message2) {              // 설명. message2가 존재하면
+            // alert(message2);        // 설명. 확인 버튼이 있는 알림창이 뜬다.(현재는 F5번을 누르면 계속 뜬다.)
         }
     </script>
 
@@ -44,9 +44,9 @@
         ModelAndView로 뷰 이름 반환하며 리다이렉트 & flash attr 사용하기
     </button>
     <script>
-        const flashMessage2 = `[[${flashMessage2}]]`;               // 설명. parameter를 넘기는 방식이 아니므로 parm.을 쓰지않는다.
-        if(flashMessage2){
-            alert(flashMessage2);       // 설명. F5번을 눌러도 처음 한번 이후로는 뜨지 않는다. (parameter를 넘기는 방식이 아니므로)
+        const flashMessage2 = `[[${flashMessage2}]]`;    // 설명. parameter를 넘기는 방식이 아니므로 'param.'을 쓰지 않는다.
+        if(flashMessage2) {
+            alert(flashMessage2);   // 설명. F5번을 눌러도 처음 한번 이후로는 뜨지 않는다.(parameter를 넘기는 방식이 아니므로)
         }
     </script>
 
