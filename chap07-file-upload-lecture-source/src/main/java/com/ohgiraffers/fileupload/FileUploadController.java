@@ -12,6 +12,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.List;
 import java.util.UUID;
 
 @Controller
@@ -64,6 +65,14 @@ public class FileUploadController {
 
         return "redirect:/result";
     }
+
+    @PostMapping("multi-file")
+    public String multiFileUpload(@RequestParam List<MultipartFile> mulFile,
+                                  @RequestParam String multiFileDescription,
+                                  RedirectAttributes rttr) {
+        return "redirect:/result";
+    }
+
 
     @GetMapping("result")
     public void result() {}
