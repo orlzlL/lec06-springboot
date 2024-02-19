@@ -62,7 +62,7 @@ public class FirstController {
      *           키 값을 작성한다.
     **/
     @PostMapping("modify")
-    public String modifyMenu(Model model, @RequestParam(defaultValue="디폴트", name = "name") String modifyName,
+    public String modifyMenu(Model model, @RequestParam(defaultValue="디폴트" , name = "name") String modifyName,
                                             @RequestParam(defaultValue = "0") int modifyPrice){
 
         String message = modifyName + "메뉴의 가격을 " + modifyPrice + "(으)로 변경하였습니다.";
