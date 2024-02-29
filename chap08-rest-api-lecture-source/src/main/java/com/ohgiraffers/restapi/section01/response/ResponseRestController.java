@@ -1,9 +1,13 @@
 package com.ohgiraffers.restapi.section01.response;
 
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -68,4 +72,19 @@ public class ResponseRestController {
         return messageList.stream()
                 .collect(Collectors.toMap(Message::getHttpStatusCode, Message::getMessage));
     }
+
+    /* 설명. 이미지 응답하기 */
+    /* 설명. produces는 response header의 content-type 설정이다. */
+    @GetMapping(value = "/image", produces = MediaType.IMAGE_JPEG_VALUE)
+    public byte[] getImage() throws IOException {
+        return getClass().getResourceAsStream("/static/image.png").readAllBytes();
+    }
+
+    /* 설명. ResponseEntity는 필수는 아니지만 유용하게 사용할 수 있다. */
+    @GetMapping("/entity")
+    public ResponseEntity<Message> getEntity(){
+        return ResponseEntity.ok(new Message(200, "응답 성공"));
+    }
+
+
 }
