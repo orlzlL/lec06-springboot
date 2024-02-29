@@ -12,7 +12,7 @@ public class SpringConfiguration {
 
     @Value("${test.value}")
     public String value;
-
+    
     @Value("${test.age}")
     public String age;
 
@@ -21,15 +21,14 @@ public class SpringConfiguration {
     public String[] arr;
 
     @Bean
-    public Object propertyReadTest(){
+    public Object propertyReadTest() {
         System.out.println("value = " + value);
         System.out.println("age = " + age);
 
-        System.out.println("========설정에서 읽어들인 여러 값 처리========");
+        System.out.println("====== 설정에서 읽어들이 여러 값 처리 ======");
 //        list.forEach(System.out::println);
         Arrays.stream(arr).forEach(System.out::println);
-
-
+        
         return new Object();
     }
 }

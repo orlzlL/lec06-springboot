@@ -20,6 +20,6 @@ public class WebConfiguration implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(stopwatchInterceptor)
-                .excludePathPatterns("/css/**");        // excludePathpatterns을 등록해 준 경로의 요청은 인터셉터가 가로채지 않음
+                .excludePathPatterns("/css/**");        // excludePathPatterns을 등록해 준 경로의 요청은 인터셉터가 가로채지 않음
     }
 }

@@ -71,7 +71,7 @@ public class FileUploadController {
                                   RedirectAttributes rttr) throws IOException {
 //        System.out.println("multiFile = " + multiFile);
 //        System.out.println("multiFileDescription = " + multiFileDescription);
-        String filePath = resourceLoader.getResource("classpath:static/uploadFiles/img/multi/")
+        String filePath = resourceLoader.getResource("classpath:static/uploadFiles/img/multi")
                         .getFile()
                         .getAbsolutePath();
 

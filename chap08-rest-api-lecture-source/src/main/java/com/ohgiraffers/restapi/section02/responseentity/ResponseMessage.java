@@ -3,7 +3,7 @@ package com.ohgiraffers.restapi.section02.responseentity;
 import java.util.Map;
 
 public class ResponseMessage {
-
+    
     private int httpStatus;                 // 응답 상태코드
     private String message;                 // 응답 메세지
     private Map<String, Object> result;     // 응답 데이터

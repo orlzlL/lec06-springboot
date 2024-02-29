@@ -21,3 +21,4 @@ GET localhost:8080/response/image
 
 ### GET request ResponseEntity
 GET localhost:8080/response/entity
+

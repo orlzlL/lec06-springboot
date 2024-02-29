@@ -13,5 +13,4 @@ public class MainController {
 
     @RequestMapping("/main")
     public void main() {}
-
 }
